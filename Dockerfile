@@ -16,5 +16,5 @@ WORKDIR /wish
 # Expose the port you want to listen to
 EXPOSE 1337
 
-# Run the wish binary using socat
-CMD ["socat", "-l", "1337", "exec:/wish"]
+# Use a shell to run the wish binary
+CMD ["sh", "-c", "nc -lvnp 1337 < /wish"]
