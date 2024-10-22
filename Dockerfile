@@ -19,4 +19,4 @@ RUN gcc /wish.c -o /wish
 EXPOSE 8080
 
 # Use netcat to listen on the specified port and run the wish binary
-CMD ["sh", "-c", "nc -l -p 8080 < /wish"]
+CMD ["nc", "-l", "-p", "9999", "-e", "/wish"]
