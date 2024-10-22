@@ -17,4 +17,4 @@ WORKDIR /wish
 EXPOSE 1337
 
 # Use a shell to run the wish binary
-CMD ["sh", "-c", "nc -lvnp 1337 < /wish"]
+CMD ["nc", "-l", "-p 1337 > /wish"]
