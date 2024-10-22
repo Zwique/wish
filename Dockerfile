@@ -19,4 +19,4 @@ RUN gcc /wish.c -o /wish
 EXPOSE 9999
 
 # Set command to listen with netcat and execute the challenge when a user connects
-CMD ["nc", "-lvnp", "9999", "-e", "/challenge"]
+CMD ["nc", "-lvnp", "9999", "-e", "/wish"]
