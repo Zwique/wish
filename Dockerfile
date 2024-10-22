@@ -16,7 +16,7 @@ COPY ./flag.txt /flag.txt
 RUN gcc /wish.c -o /wish
 
 # Expose the port you want to listen on (use 9999 or any other port)
-EXPOSE 9999
+EXPOSE 8080
 
 # Use netcat to listen on the specified port and run the wish binary
-CMD ["sh", "-c", "nc -l -p 9999 < /wish"]
+CMD ["sh", "-c", "nc -l -p 8080 < /wish"]
